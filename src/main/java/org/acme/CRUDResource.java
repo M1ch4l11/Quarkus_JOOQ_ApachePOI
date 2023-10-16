@@ -43,10 +43,6 @@ public class CRUDResource {
                 .fetch();
     }
 
-    /*
-     * 415 Unsupported Media Type - I found a way to convert JSON to a JOOQ record class,
-     * The trouble is, I have created the model class myself, and JSON must be mapped by ObjectMapper :(
-     * */
     @POST
     @Path("/customer")
     public int setRow(@PartType(MediaType.APPLICATION_JSON) String json) throws JsonProcessingException {
